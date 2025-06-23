@@ -30,17 +30,31 @@ By the end of the course, learners will be able to:
 
 ## **Modules Overview**
 
-| **Module** | **Title**                                                                                       |
-|------------|--------------------------------------------------------------------------------------------------|
-| Module 1   | Generic Recipe for AI-Related Problems                                                           |
-| Module 2   | Visual Introduction to Optimization                                                              |
-| Module 3   | Visual Introduction to Machine Learning through Linear Regression                                |
-| Module 4   | Visual Introduction to Deep Learning                                                             |
-| Module 5   | Part 1: Overview and Evolution of Language Models  
-             Part 2: Sequence Analysis - Neural Network-Based Approaches  
-             Part 3: Large Language Models (LLMs) - Quick Overview                                              |
-| Module 6   | Part 1: Introduction to Generative AI (GenAI) Part I  
-             Part 2: Introduction to Generative AI (GenAI) Part II                                              |
+- Module 1
+Generic Recipe for AI-Related Problems
+
+- Module 2
+Visual Introduction to Optimization
+
+- Module 3
+Visual Introduction to Machine Learning through Linear Regression
+
+- Module 4
+Visual Introduction to Deep Learning
+
+- Module 5
+
+Part 1: Overview and Evolution of Language Models
+
+Part 2: Sequence Analysis – Neural Network-Based Approaches
+
+Part 3: Large Language Models (LLMs) – Quick Overview
+
+- Module 6
+
+Part 1: Introduction to Generative AI (GenAI) Part I
+
+Part 2: Introduction to Generative AI (GenAI) Part II
 
 ---
 
