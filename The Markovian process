@@ -1,0 +1,46 @@
+import matplotlib.pyplot as plt
+import networkx as nx
+
+# États de la chaîne
+states = ["Soleil ☀️", "Pluie 🌧️", "Nuage ☁️"]
+
+# Matrice de transition
+transitions = {
+    ("Soleil ☀️", "Soleil ☀️"): 0.6,
+    ("Soleil ☀️", "Pluie 🌧️"): 0.3,
+    ("Soleil ☀️", "Nuage ☁️"): 0.1,
+    ("Pluie 🌧️", "Soleil ☀️"): 0.2,
+    ("Pluie 🌧️", "Pluie 🌧️"): 0.5,
+    ("Pluie 🌧️", "Nuage ☁️"): 0.3,
+    ("Nuage ☁️", "Soleil ☀️"): 0.3,
+    ("Nuage ☁️", "Pluie 🌧️"): 0.3,
+    ("Nuage ☁️", "Nuage ☁️"): 0.4,
+}
+
+# Création du graphe
+G = nx.DiGraph()
+
+# Ajout des nœuds
+G.add_nodes_from(states)
+
+# Ajout des arêtes avec poids
+for (src, dst), prob in transitions.items():
+    G.add_edge(src, dst, weight=prob)
+
+# Position circulaire des nœuds
+pos = nx.circular_layout(G)
+
+# Dessin du graphe
+plt.figure(figsize=(8, 6))
+nx.draw_networkx_nodes(G, pos, node_size=3000, node_color="lightyellow", edgecolors="black")
+nx.draw_networkx_labels(G, pos, font_size=12, font_family="sans-serif")
+
+# Arêtes + étiquettes de probabilité
+edges = G.edges(data=True)
+nx.draw_networkx_edges(G, pos, edge_color='gray', arrows=True)
+edge_labels = {(u, v): f"{d['weight']:.1f}" for u, v, d in edges}
+nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_size=10)
+
+plt.title("Chaîne de Markov : Prévision Météo", fontsize=14)
+plt.axis('off')
+plt.show()
